@@ -19,7 +19,7 @@ with open("input.json") as json_file:
     	})
 
 # Sort by prices without the "$" and as ints
-outputData.sort(key=lambda s: int(s["price"][1:]))
+outputData.sort(key=lambda s: float(s["price"][1:]))
 
 # Output into file with given formatting
 with open("output.json", "w") as outfile:
