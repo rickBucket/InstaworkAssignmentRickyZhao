@@ -1,0 +1,8 @@
+[
+{"name":"iPhone X", "color":"White", "price":"$799", "storage":"256GB", "rating":"3.5 stars", "url":"https://www.amazon.com/iPhone_X_White"},
+{"name":"iPhone X", "color":"Black", "price":"$799", "storage":"256GB", "rating":"3.5 stars", "url":"https://www.amazon.com/iPhone_X_Black"},
+{"name":"iPhone 11", "color":"White", "price":"$999", "storage":"128GB", "rating":"3.75 stars", "url":"https://www.amazon.com/iPhone_X_White"},
+{"name":"iPhone 11", "color":"Black", "price":"$999", "storage":"128GB", "rating":"3.75 stars", "url":"https://www.amazon.com/iPhone_X_Black"},
+{"name":"iPhone 11", "color":"Rose Gold", "price":"$1099", "storage":"256GB", "rating":"4 stars", "url":"https://www.amazon.com/iPhone_11_Rose_Gold"},
+{"name":"iPhone 11", "color":"Black", "price":"$1099", "storage":"256GB", "rating":"4 stars", "url":"https://www.amazon.com/iPhone_X_Black"}
+]
