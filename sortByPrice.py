@@ -1,7 +1,30 @@
-#!/usr/bin/python
+ #!/usr/bin/python
 
 import json
 import sys
+
+# Sorting helper method via Merge Sort
+def mSort(toSort):
+	if len(toSort) <= 1:
+		return toSort
+	left = mSort(toSort[:len(toSort)//2])
+	right = mSort(toSort[len(toSort)//2:])
+
+	didSort = []
+	i = 0
+	j = 0
+	while i < len(left) and j < len(right):
+		if float(left[i]["price"][1:]) < float(right[j]["price"][1:]):
+			didSort.append(left[i])
+			i += 1
+		else:
+			didSort.append(right[j])
+			j += 1
+	didSort += left[i:]
+	didSort += right[j:]
+	return didSort
+
+
 
 # List of property names in their order
 fieldnames = ["name", "color", "price", "storage", "rating", "url"]
@@ -21,18 +44,12 @@ with open(filename) as json_file:
     	tempDict = {}
     	for i in range(len(fieldnames)):
     		tempDict[fieldnames[i]] = line[i]
-    	#outputData.append({
-    	#	"name": line[0],
-    	#	"color": line[1],
-    	#	"price": line[2],
-    	#	"storage": line[3],
-    	#	"rating": line[4],
-    	#	"url": line[5]
-    	#})
+
     	outputData.append(tempDict)
 
 # Sort by prices without the "$" and as ints
-outputData.sort(key=lambda s: float(s["price"][1:]))
+outputData = mSort(outputData)
+
 
 # Output into file with given formatting
 with open("output.json", "w") as outfile:
@@ -43,17 +60,6 @@ with open("output.json", "w") as outfile:
 			outfile.write(json.dumps(outputData[i][fieldnames[j]]))
 			if j < len(fieldnames)-1:
 				outfile.write(", \"" + fieldnames[j+1] + "\":")
-	#	outfile.write(json.dumps(outputData[index]["name"]))
-	#	outfile.write(", \"color\":")
-	#	outfile.write(json.dumps(outputData[index]["color"]))
-	#	outfile.write(", \"price\":")
-	#	outfile.write(json.dumps(outputData[index]["price"]))
-	#	outfile.write(", \"storage\":")
-	#	outfile.write(json.dumps(outputData[index]["storage"]))
-	#	outfile.write(", \"rating\":")
-	#	outfile.write(json.dumps(outputData[index]["rating"]))
-	#	outfile.write(", \"url\":")
-	#	outfile.write(json.dumps(outputData[index]["url"]))
 		if i+1 == len(outputData):
 			outfile.write("}")
 		else: 
@@ -61,6 +67,10 @@ with open("output.json", "w") as outfile:
 		outfile.write("\n")
 	outfile.write("]")
 
+
+
+
+	
 
 
 
