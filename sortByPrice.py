@@ -1,12 +1,19 @@
 #!/usr/bin/python
 
 import json
+import sys
 
+
+if (len(sys.argv) > 1):
+	filename = sys.argv[1]
+else:
+	filename = "input.json"
 
 outputData = []
 
 # Read input file and add keys
-with open("input.json") as json_file:
+
+with open(filename) as json_file:
     inputFile = json.load(json_file)
     for line in inputFile:
     	outputData.append({
