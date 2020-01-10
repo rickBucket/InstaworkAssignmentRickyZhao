@@ -10,3 +10,4 @@ This implementation is set to read in given data in the file named "input.json" 
 It is configured so that another input file can be used to test by entering the file name in the command line after the original command.
 
 	example:	$ python sortByPrice.py input2.json
+
