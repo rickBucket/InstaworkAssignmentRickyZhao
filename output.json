@@ -1,50 +1,50 @@
 [
   {
     "rating": "3.5 stars", 
-    "name": "F", 
+    "name": "iPhone X", 
     "color": "Black", 
-    "price": "$0", 
-    "storage": "256GB", 
-    "url": "https://www.amazon.com/iPhone_X_Black"
-  }, 
-  {
-    "rating": "3.75 stars", 
-    "name": "E", 
-    "color": "Black", 
-    "price": "$1.0", 
-    "storage": "128GB", 
-    "url": "https://www.amazon.com/iPhone_X_Black"
-  }, 
-  {
-    "rating": "4 stars", 
-    "name": "B", 
-    "color": "Rose Gold", 
-    "price": "$1", 
-    "storage": "256GB", 
-    "url": "https://www.amazon.com/iPhone_11_Rose_Gold"
-  }, 
-  {
-    "rating": "3.75 stars", 
-    "name": "D", 
-    "color": "White", 
-    "price": "$2.4", 
-    "storage": "128GB", 
-    "url": "https://www.amazon.com/iPhone_X_White"
-  }, 
-  {
-    "rating": "4 stars", 
-    "name": "C", 
-    "color": "Black", 
-    "price": "$2.5", 
+    "price": "$799", 
     "storage": "256GB", 
     "url": "https://www.amazon.com/iPhone_X_Black"
   }, 
   {
     "rating": "3.5 stars", 
-    "name": "A", 
+    "name": "iPhone X", 
     "color": "White", 
-    "price": "$5", 
+    "price": "$799", 
     "storage": "256GB", 
     "url": "https://www.amazon.com/iPhone_X_White"
+  }, 
+  {
+    "rating": "3.75 stars", 
+    "name": "iPhone 11", 
+    "color": "Black", 
+    "price": "$999", 
+    "storage": "128GB", 
+    "url": "https://www.amazon.com/iPhone_X_Black"
+  }, 
+  {
+    "rating": "3.75 stars", 
+    "name": "iPhone 11", 
+    "color": "White", 
+    "price": "$999", 
+    "storage": "128GB", 
+    "url": "https://www.amazon.com/iPhone_X_White"
+  }, 
+  {
+    "rating": "4 stars", 
+    "name": "iPhone 11", 
+    "color": "Black", 
+    "price": "$1099", 
+    "storage": "256GB", 
+    "url": "https://www.amazon.com/iPhone_X_Black"
+  }, 
+  {
+    "rating": "4 stars", 
+    "name": "iPhone 11", 
+    "color": "Rose Gold", 
+    "price": "$1099", 
+    "storage": "256GB", 
+    "url": "https://www.amazon.com/iPhone_11_Rose_Gold"
   }
 ]
