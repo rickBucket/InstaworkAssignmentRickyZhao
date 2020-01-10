@@ -46,11 +46,9 @@ with open(filename) as json_file:
      		"url": line[5]
      	})
 
-# Sort by prices without the "$" and as ints
+# Sort by prices without the "$" and as floats to account for cents precision
 outputData = mSort(outputData)
 
-
-# Output into file with given formatting
 with open("output.json", "w") as outfile:
 	json.dump(outputData, outfile, indent = 2)	
 
