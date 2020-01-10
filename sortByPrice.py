@@ -25,10 +25,6 @@ def mSort(toSort):
 	return didSort
 
 
-
-# List of property names in their order
-fieldnames = ["name", "color", "price", "storage", "rating", "url"]
-
 # Alternative file name via command line
 if (len(sys.argv) > 1):
 	filename = sys.argv[1]
@@ -41,11 +37,14 @@ outputData = []
 with open(filename) as json_file:
     inputFile = json.load(json_file)
     for line in inputFile:
-    	tempDict = {}
-    	for i in range(len(fieldnames)):
-    		tempDict[fieldnames[i]] = line[i]
-
-    	outputData.append(tempDict)
+    	outputData.append({
+     		"name": line[0],
+     		"color": line[1],
+     		"price": line[2],
+     		"storage": line[3],
+     		"rating": line[4],
+     		"url": line[5]
+     	})
 
 # Sort by prices without the "$" and as ints
 outputData = mSort(outputData)
@@ -53,19 +52,7 @@ outputData = mSort(outputData)
 
 # Output into file with given formatting
 with open("output.json", "w") as outfile:
-	outfile.write("[" + "\n")
-	for i in range(len(outputData)):
-		outfile.write("{\"name\":")
-		for j in range(len(fieldnames)):
-			outfile.write(json.dumps(outputData[i][fieldnames[j]]))
-			if j < len(fieldnames)-1:
-				outfile.write(", \"" + fieldnames[j+1] + "\":")
-		if i+1 == len(outputData):
-			outfile.write("}")
-		else: 
-			outfile.write("},")
-		outfile.write("\n")
-	outfile.write("]")
+	json.dump(outputData, outfile, indent = 2)	
 
 
 
