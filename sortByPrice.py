@@ -4,6 +4,7 @@ import json
 import sys
 
 
+# Alternative file name via command line
 if (len(sys.argv) > 1):
 	filename = sys.argv[1]
 else:
@@ -12,7 +13,6 @@ else:
 outputData = []
 
 # Read input file and add keys
-
 with open(filename) as json_file:
     inputFile = json.load(json_file)
     for line in inputFile:
